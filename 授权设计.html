@@ -1,0 +1,721 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>授权设计</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/授权设计/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/授权设计/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (文本段落) -->
+      <div id="u1845" class="ax_default paragraph">
+        <img id="u1845_img" class="img " src="images/授权设计/u1845.png"/>
+        <!-- Unnamed () -->
+        <div id="u1846" class="text">
+          <p><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">授权是什么？</span></p><p><span style="font-family:'ArialMT', 'Arial';font-weight:400;">App</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">向系统申请授予某些权限，从而相应的功能才能正常使用。常见的有使用网络、推送、使用摄像头、查看照片、位置信息、通讯录</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">…</span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">根据业务需求来说，授权分</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">2</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">种</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">授权有哪几种？</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">必要授权。必须具备的权限，否则</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">APP</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">的主体功能无法使用，必须在首次打开</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">APP</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">的时候就获取。同时用户允许</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">APP</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">获得该权限。比如你首次打开微信的时候不能不允许它访问网络。</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">非必要授权。即使不授权，</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">APP</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">的主题功能不受影响。仅部分功能无法使用。</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">什么时候申请授权？</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">首次启动</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">App</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">只出现必要的授权申请，比如大部分</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">APP</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">都需要访问网络的权限。</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">当用户真正需要的时候才去发起，确保用户明白同意后会得到什么样的反馈。比如想去查看附近的妹子，申请获取</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">&quot;</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">位置信息</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">&quot;</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">授权。</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">如何申请授权？</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&#149; </span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">用故事板去解释</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">App</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">为什么需要这个授权，适合首次</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">App</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">的时候申请必要授权。</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'ArialMT', 'Arial';font-weight:400;">&#149; </span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">在申请授权的时候，通过一张背景图片来解释这个授权申请。</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'ArialMT', 'Arial';font-weight:400;">&#149; </span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">申请授权之前用浮层的方式预先告知，因为你只能触发</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">iOS</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">默认授权申请一次。</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'ArialMT', 'Arial';font-weight:400;">&#149; </span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">用户自己触发授权操作的效果，甚至要好于在一个和场景相关的页面自动出现的授权申请。因为用户有心理预期，同意授权的可能性也更高。</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">怎样处理被拒绝的授权申请？</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">理论上来说任何时候授权申请被拒绝后，都应该向用户提供反馈。</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">由于拒绝授权申请后可能会导致部分功能无法正常使用，所以需要向用户解释清楚。如果因为重要的授权申请被拒绝而导致它不可以运行了，必须要向用户解释为什么这个授权申请一定要被同意，并且提供如何重新开启的路径或者说明。</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">注意事项</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;"></span></p><p><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">流程图是以</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">iOS</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">为主，</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">Android</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">在V6.0之前安装的时候就会提醒获取所有的授权，否则无法安装成功并使用。V6.0之后支持在有需要的时候自动获取授权。</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1847" class="ax_default flow_shape">
+        <div id="u1847_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1848" class="text">
+          <p><span>打开App</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1849" class="ax_default connector">
+        <img id="u1849_seg0" class="img " src="images/授权设计/u1849_seg0.png" alt="u1849_seg0"/>
+        <img id="u1849_seg1" class="img " src="images/规范自检清单/u484_seg1.png" alt="u1849_seg1"/>
+        <!-- Unnamed () -->
+        <div id="u1850" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u1851" class="ax_default flow_shape">
+        <img id="u1851_img" class="img " src="images/加载模式2种/u1554.png"/>
+        <!-- Unnamed () -->
+        <div id="u1852" class="text">
+          <p><span>是否同意授权</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1853" class="ax_default connector">
+        <img id="u1853_seg0" class="img " src="images/授权设计/u1853_seg0.png" alt="u1853_seg0"/>
+        <img id="u1853_seg1" class="img " src="images/授权设计/u1853_seg1.png" alt="u1853_seg1"/>
+        <!-- Unnamed () -->
+        <div id="u1854" class="text">
+          <p><span>是</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1855" class="ax_default connector">
+        <img id="u1855_seg0" class="img " src="images/加载模式2种/u1641_seg0.png" alt="u1855_seg0"/>
+        <img id="u1855_seg1" class="img " src="images/加载模式2种/u1641_seg1.png" alt="u1855_seg1"/>
+        <!-- Unnamed () -->
+        <div id="u1856" class="text">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1857" class="ax_default flow_shape">
+        <div id="u1857_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1858" class="text">
+          <p><span>下次用需要该授权的功能，弹框提醒</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1859" class="ax_default flow_shape">
+        <div id="u1859_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1860" class="text">
+          <p><span>正常操作</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u1861" class="ax_default flow_shape">
+        <img id="u1861_img" class="img " src="images/加载模式2种/u1554.png"/>
+        <!-- Unnamed () -->
+        <div id="u1862" class="text">
+          <p><span>申请推送授权</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1863" class="ax_default flow_shape">
+        <div id="u1863_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1864" class="text">
+          <p><span>正常操作</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1865" class="ax_default flow_shape">
+        <div id="u1865_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1866" class="text">
+          <p><span>弹框提醒去开启</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1867" class="ax_default connector">
+        <img id="u1867_seg0" class="img " src="images/授权设计/u1853_seg0.png" alt="u1867_seg0"/>
+        <img id="u1867_seg1" class="img " src="images/授权设计/u1853_seg1.png" alt="u1867_seg1"/>
+        <!-- Unnamed () -->
+        <div id="u1868" class="text">
+          <p><span>是</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u1869" class="ax_default flow_shape">
+        <img id="u1869_img" class="img " src="images/加载模式2种/u1554.png"/>
+        <!-- Unnamed () -->
+        <div id="u1870" class="text">
+          <p><span>判断有无授权</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1871" class="ax_default connector">
+        <img id="u1871_seg0" class="img " src="images/授权设计/u1871_seg0.png" alt="u1871_seg0"/>
+        <img id="u1871_seg1" class="img " src="images/授权设计/u1871_seg1.png" alt="u1871_seg1"/>
+        <img id="u1871_seg2" class="img " src="images/授权设计/u1871_seg2.png" alt="u1871_seg2"/>
+        <img id="u1871_seg3" class="img " src="images/规范自检清单/u484_seg1.png" alt="u1871_seg3"/>
+        <!-- Unnamed () -->
+        <div id="u1872" class="text">
+          <p><span>未申请</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1873" class="ax_default connector">
+        <img id="u1873_seg0" class="img " src="images/授权设计/u1873_seg0.png" alt="u1873_seg0"/>
+        <img id="u1873_seg1" class="img " src="images/授权设计/u1873_seg1.png" alt="u1873_seg1"/>
+        <img id="u1873_seg2" class="img " src="images/规范自检清单/u484_seg1.png" alt="u1873_seg2"/>
+        <!-- Unnamed () -->
+        <div id="u1874" class="text">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1875" class="ax_default flow_shape">
+        <div id="u1875_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1876" class="text">
+          <p><span>弹框提醒去开启</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1877" class="ax_default connector">
+        <img id="u1877_seg0" class="img " src="images/授权设计/u1877_seg0.png" alt="u1877_seg0"/>
+        <img id="u1877_seg1" class="img " src="images/授权设计/u1877_seg1.png" alt="u1877_seg1"/>
+        <img id="u1877_seg2" class="img " src="images/授权设计/u1877_seg2.png" alt="u1877_seg2"/>
+        <img id="u1877_seg3" class="img " src="images/规范自检清单/u484_seg1.png" alt="u1877_seg3"/>
+        <!-- Unnamed () -->
+        <div id="u1878" class="text">
+          <p><span>已申请，否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1879" class="ax_default flow_shape">
+        <div id="u1879_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1880" class="text">
+          <p><span>正常操作</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1881" class="ax_default connector">
+        <img id="u1881_seg0" class="img " src="images/授权设计/u1881_seg0.png" alt="u1881_seg0"/>
+        <img id="u1881_seg1" class="img " src="images/usercase/u210_seg1.png" alt="u1881_seg1"/>
+        <img id="u1881_seg2" class="img " src="images/规范自检清单/u484_seg1.png" alt="u1881_seg2"/>
+        <!-- Unnamed () -->
+        <div id="u1882" class="text">
+          <p><span>已申请，是</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1883" class="ax_default flow_shape">
+        <div id="u1883_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1884" class="text">
+          <p><span>拍照</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1885" class="ax_default flow_shape">
+        <div id="u1885_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1886" class="text">
+          <p><span>从相册上传</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1887" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 警告框内容 (矩形) -->
+        <div id="u1888" class="ax_default _形状1" data-label="警告框内容">
+          <div id="u1888_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1889" class="text">
+            <p style="font-size:16px;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">提示</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;font-size:13px;"></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;">App名称没有授权访问您的相机，您可以打开系统&quot;设置&gt;隐私&gt;相机&quot;，允许App名称访问您的相机。</span></p>
+          </div>
+        </div>
+
+        <!-- 左操作 (矩形) -->
+        <div id="u1890" class="ax_default box_1" data-label="左操作">
+          <div id="u1890_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1891" class="text">
+            <p><span>取消</span></p>
+          </div>
+        </div>
+
+        <!-- 右操作 (矩形) -->
+        <div id="u1892" class="ax_default box_1" data-label="右操作">
+          <div id="u1892_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1893" class="text">
+            <p><span>设置</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1894" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 警告框内容 (矩形) -->
+        <div id="u1895" class="ax_default _形状1" data-label="警告框内容">
+          <div id="u1895_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1896" class="text">
+            <p style="font-size:16px;text-align:center;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">定位失败</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:14px;text-align:left;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;font-size:13px;">请在手机设置中开启定位服务</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">(设置&gt;隐私&gt;定位服务&gt;开启)</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;font-size:13px;">，才能正常使用直播功能。</span></p>
+          </div>
+        </div>
+
+        <!-- 开启定位 (矩形) -->
+        <div id="u1897" class="ax_default box_1" data-label="开启定位">
+          <div id="u1897_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1898" class="text">
+            <p><span>开启定位</span></p>
+          </div>
+        </div>
+
+        <!-- 开启定位 (矩形) [footnote] -->
+        <div id="u1897_ann" class="annotation"></div>
+
+        <!-- 跳过 (矩形) -->
+        <div id="u1899" class="ax_default box_1" data-label="跳过">
+          <div id="u1899_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1900" class="text">
+            <p><span>跳过</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1901" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 警告框内容 (矩形) -->
+        <div id="u1902" class="ax_default _形状1" data-label="警告框内容">
+          <div id="u1902_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1903" class="text">
+            <p style="font-size:16px;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">通讯录无法获取</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;">不能访问您的通讯录，如果想使用该功能，请在系统的设置&gt;隐私中打开。</span></p>
+          </div>
+        </div>
+
+        <!-- 左操作 (矩形) -->
+        <div id="u1904" class="ax_default box_1" data-label="左操作">
+          <div id="u1904_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1905" class="text">
+            <p><span>设置</span></p>
+          </div>
+        </div>
+
+        <!-- 右操作 (矩形) -->
+        <div id="u1906" class="ax_default box_1" data-label="右操作">
+          <div id="u1906_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1907" class="text">
+            <p><span>好</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1908" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 弹窗内容 (矩形) -->
+        <div id="u1909" class="ax_default _形状1" data-label="弹窗内容">
+          <div id="u1909_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1910" class="text">
+            <p style="font-size:16px;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">麦克风被禁用</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:16px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:14px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;">请在iPhone的&quot;设置-隐私-麦克风&quot;中允许App名称访问你的麦克风。</span></p>
+          </div>
+        </div>
+
+        <!-- 确定按钮 (矩形) -->
+        <div id="u1911" class="ax_default _文本" data-label="确定按钮">
+          <div id="u1911_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1912" class="text">
+            <p><span>确定</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1913" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 警告框内容 (矩形) -->
+        <div id="u1914" class="ax_default _形状1" data-label="警告框内容">
+          <div id="u1914_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1915" class="text">
+            <p style="font-size:16px;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;App</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">名称</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">想给您发送通知</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;">&quot;通知&quot;可能包括提醒、声音和图标标记。这些可在&quot;设置&quot;中配置。</span></p>
+          </div>
+        </div>
+
+        <!-- 左操作 (矩形) -->
+        <div id="u1916" class="ax_default box_1" data-label="左操作">
+          <div id="u1916_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1917" class="text">
+            <p><span>不允许</span></p>
+          </div>
+        </div>
+
+        <!-- 右操作 (矩形) -->
+        <div id="u1918" class="ax_default box_1" data-label="右操作">
+          <div id="u1918_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1919" class="text">
+            <p><span>允许</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1920" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 警告框内容 (矩形) -->
+        <div id="u1921" class="ax_default _形状1" data-label="警告框内容">
+          <div id="u1921_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1922" class="text">
+            <p style="font-size:16px;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">允许</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;App</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">名称</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">在您使用该应用时访问您的位置吗？</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;">请选择&quot;允许&quot;以便定位到您的位置</span></p>
+          </div>
+        </div>
+
+        <!-- 左操作 (矩形) -->
+        <div id="u1923" class="ax_default box_1" data-label="左操作">
+          <div id="u1923_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1924" class="text">
+            <p><span>不允许</span></p>
+          </div>
+        </div>
+
+        <!-- 右操作 (矩形) -->
+        <div id="u1925" class="ax_default box_1" data-label="右操作">
+          <div id="u1925_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1926" class="text">
+            <p><span>允许</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1927" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 警告框内容 (矩形) -->
+        <div id="u1928" class="ax_default _形状1" data-label="警告框内容">
+          <div id="u1928_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1929" class="text">
+            <p style="font-size:16px;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">允许</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;App</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">名称</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">使用数据?</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;">可能同时包含无线局域网和蜂窝移动数据。</span></p>
+          </div>
+        </div>
+
+        <!-- 左操作 (矩形) -->
+        <div id="u1930" class="ax_default box_1" data-label="左操作">
+          <div id="u1930_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1931" class="text">
+            <p><span>不允许</span></p>
+          </div>
+        </div>
+
+        <!-- 右操作 (矩形) -->
+        <div id="u1932" class="ax_default box_1" data-label="右操作">
+          <div id="u1932_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1933" class="text">
+            <p><span>允许</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 申请必要授权 (矩形) -->
+      <div id="u1934" class="ax_default flow_shape" data-label="申请必要授权">
+        <div id="u1934_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1935" class="text">
+          <p><span>申请必要授权</span></p>
+        </div>
+      </div>
+
+      <!-- 申请必要授权 (矩形) [footnote] -->
+      <div id="u1934_ann" class="annotation"></div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1936" class="ax_default connector">
+        <img id="u1936_seg0" class="img " src="images/授权设计/u1849_seg0.png" alt="u1936_seg0"/>
+        <img id="u1936_seg1" class="img " src="images/规范自检清单/u484_seg1.png" alt="u1936_seg1"/>
+        <!-- Unnamed () -->
+        <div id="u1937" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1938" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 警告框内容 (矩形) -->
+        <div id="u1939" class="ax_default _形状1" data-label="警告框内容">
+          <div id="u1939_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1940" class="text">
+            <p style="font-size:16px;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;App</span><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">名称</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;</span><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">想访问您的麦克风</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:13px;"><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">&quot;App名称&quot;想访问您的麦克风，来录音。</span></p>
+          </div>
+        </div>
+
+        <!-- 左操作 (矩形) -->
+        <div id="u1941" class="ax_default box_1" data-label="左操作">
+          <div id="u1941_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1942" class="text">
+            <p><span>不允许</span></p>
+          </div>
+        </div>
+
+        <!-- 右操作 (矩形) -->
+        <div id="u1943" class="ax_default box_1" data-label="右操作">
+          <div id="u1943_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1944" class="text">
+            <p><span>好</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1945" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 警告框内容 (矩形) -->
+        <div id="u1946" class="ax_default _形状1" data-label="警告框内容">
+          <div id="u1946_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1947" class="text">
+            <p style="font-size:16px;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;App</span><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">名称</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;</span><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">想访问您的相机</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:13px;"><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">&quot;App名称&quot;想访问您的相机，拍摄一些照片。</span></p><p style="font-size:13px;"><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;"><br></span></p>
+          </div>
+        </div>
+
+        <!-- 左操作 (矩形) -->
+        <div id="u1948" class="ax_default box_1" data-label="左操作">
+          <div id="u1948_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1949" class="text">
+            <p><span>不允许</span></p>
+          </div>
+        </div>
+
+        <!-- 右操作 (矩形) -->
+        <div id="u1950" class="ax_default box_1" data-label="右操作">
+          <div id="u1950_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1951" class="text">
+            <p><span>好</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1952" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 警告框内容 (矩形) -->
+        <div id="u1953" class="ax_default _形状1" data-label="警告框内容">
+          <div id="u1953_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1954" class="text">
+            <p style="font-size:16px;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;App</span><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">名称</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;</span><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">想访问您的通讯录</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:13px;"><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">&quot;App名称&quot;想访问您的通讯录，来给你匹配一些好友。</span></p>
+          </div>
+        </div>
+
+        <!-- 左操作 (矩形) -->
+        <div id="u1955" class="ax_default box_1" data-label="左操作">
+          <div id="u1955_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1956" class="text">
+            <p><span>不允许</span></p>
+          </div>
+        </div>
+
+        <!-- 右操作 (矩形) -->
+        <div id="u1957" class="ax_default box_1" data-label="右操作">
+          <div id="u1957_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1958" class="text">
+            <p><span>好</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1959" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 警告框内容 (矩形) -->
+        <div id="u1960" class="ax_default _形状1" data-label="警告框内容">
+          <div id="u1960_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1961" class="text">
+            <p style="font-size:16px;"><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">已为</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;App</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">名称</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;">&quot;</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;font-style:normal;">关闭无线局域网</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:13px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;">您可以在&quot;设置&quot;中为此应用打开无线局域网。</span></p>
+          </div>
+        </div>
+
+        <!-- 左操作 (矩形) -->
+        <div id="u1962" class="ax_default box_1" data-label="左操作">
+          <div id="u1962_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1963" class="text">
+            <p><span>设置</span></p>
+          </div>
+        </div>
+
+        <!-- 右操作 (矩形) -->
+        <div id="u1964" class="ax_default box_1" data-label="右操作">
+          <div id="u1964_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1965" class="text">
+            <p><span>好</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u1966" class="ax_default flow_shape">
+        <img id="u1966_img" class="img " src="images/加载模式2种/u1554.png"/>
+        <!-- Unnamed () -->
+        <div id="u1967" class="text">
+          <p><span>是否第一次打开</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1968" class="ax_default connector">
+        <img id="u1968_seg0" class="img " src="images/授权设计/u1853_seg0.png" alt="u1968_seg0"/>
+        <img id="u1968_seg1" class="img " src="images/授权设计/u1853_seg1.png" alt="u1968_seg1"/>
+        <!-- Unnamed () -->
+        <div id="u1969" class="text">
+          <p><span>是</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (菱形) -->
+      <div id="u1970" class="ax_default flow_shape">
+        <img id="u1970_img" class="img " src="images/加载模式2种/u1554.png"/>
+        <!-- Unnamed () -->
+        <div id="u1971" class="text">
+          <p><span>必要授权是否得到</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1972" class="ax_default flow_shape">
+        <div id="u1972_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1973" class="text">
+          <p><span>弹框提醒去开启</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1974" class="ax_default _连接符">
+        <img id="u1974_seg0" class="img " src="images/授权设计/u1974_seg0.png" alt="u1974_seg0"/>
+        <img id="u1974_seg1" class="img " src="images/usercase/u210_seg1.png" alt="u1974_seg1"/>
+        <img id="u1974_seg2" class="img " src="images/授权设计/u1853_seg1.png" alt="u1974_seg2"/>
+        <!-- Unnamed () -->
+        <div id="u1975" class="text">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1976" class="ax_default connector">
+        <img id="u1976_seg0" class="img " src="images/加载模式2种/u1641_seg0.png" alt="u1976_seg0"/>
+        <img id="u1976_seg1" class="img " src="images/加载模式2种/u1641_seg1.png" alt="u1976_seg1"/>
+        <!-- Unnamed () -->
+        <div id="u1977" class="text">
+          <p><span>否</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1978" class="ax_default connector">
+        <img id="u1978_seg0" class="img " src="images/授权设计/u1978_seg0.png" alt="u1978_seg0"/>
+        <img id="u1978_seg1" class="img " src="images/授权设计/u1978_seg1.png" alt="u1978_seg1"/>
+        <!-- Unnamed () -->
+        <div id="u1979" class="text">
+          <p><span>经过一些步骤后</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1980" class="ax_default connector">
+        <img id="u1980_seg0" class="img " src="images/授权设计/u1849_seg0.png" alt="u1980_seg0"/>
+        <img id="u1980_seg1" class="img " src="images/规范自检清单/u484_seg1.png" alt="u1980_seg1"/>
+        <!-- Unnamed () -->
+        <div id="u1981" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1982" class="ax_default connector">
+        <img id="u1982_seg0" class="img " src="images/授权设计/u1982_seg0.png" alt="u1982_seg0"/>
+        <img id="u1982_seg1" class="img " src="images/授权设计/u1982_seg1.png" alt="u1982_seg1"/>
+        <img id="u1982_seg2" class="img " src="images/加载模式2种/u1612_seg2.png" alt="u1982_seg2"/>
+        <img id="u1982_seg3" class="img " src="images/加载模式2种/u1612_seg3.png" alt="u1982_seg3"/>
+        <!-- Unnamed () -->
+        <div id="u1983" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u1984" class="ax_default flow_shape">
+        <div id="u1984_div" class=""></div>
+        <!-- Unnamed () -->
+        <div id="u1985" class="text">
+          <p><span>…</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (连接线) -->
+      <div id="u1986" class="ax_default connector">
+        <img id="u1986_seg0" class="img " src="images/授权设计/u1982_seg0.png" alt="u1986_seg0"/>
+        <img id="u1986_seg1" class="img " src="images/授权设计/u1986_seg1.png" alt="u1986_seg1"/>
+        <img id="u1986_seg2" class="img " src="images/加载模式2种/u1612_seg2.png" alt="u1986_seg2"/>
+        <img id="u1986_seg3" class="img " src="images/加载模式2种/u1612_seg3.png" alt="u1986_seg3"/>
+        <!-- Unnamed () -->
+        <div id="u1987" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u1988" class="ax_default" data-width="295" data-height="140">
+
+        <!-- 弹窗内容 (矩形) -->
+        <div id="u1989" class="ax_default _形状1" data-label="弹窗内容">
+          <div id="u1989_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1990" class="text">
+            <p style="font-size:16px;"><span style="font-family:'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';font-weight:650;">推送被禁用</span><span style="font-family:'Arial-BoldMT', 'Arial Bold', 'Arial';font-weight:700;"></span></p><p style="font-size:16px;"><span style="font-family:'ArialMT', 'Arial';font-weight:400;"><br></span></p><p style="font-size:14px;"><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">请在</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">iPhone</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">的设置中允许</span><span style="font-family:'ArialMT', 'Arial';font-weight:400;">App</span><span style="font-family:'PingFangSC-Regular', 'PingFang SC';font-weight:400;">名称使用推送功能。</span></p>
+          </div>
+        </div>
+
+        <!-- 确定按钮 (矩形) -->
+        <div id="u1991" class="ax_default _文本" data-label="确定按钮">
+          <div id="u1991_div" class=""></div>
+          <!-- Unnamed () -->
+          <div id="u1992" class="text">
+            <p><span>确定</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
